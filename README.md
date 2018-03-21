@@ -6,7 +6,7 @@ RTKLIB rtknavi port on android.
 
 ### Extended
 
-* RTKLIB Version rtkexplorer 2.4.3 demo_5 B29a
+* RTKLIB Version rtkexplorer 2.4.3 demo_5 B29b
 * Parameters identified as to how the .conf files in rtknavi etc are lableed
 * Patched RTKLIB to add unixsvr socket support
 * Updated build to support Android Studio and Android SDK versions 18 & higher

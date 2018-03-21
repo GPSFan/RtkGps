@@ -55,7 +55,7 @@ SUCH DAMAGE.
 
 ---------------------------------------------------------------------------
 Modifications from original code:
-Copyright (c) 2017, Ken McGuire (GPSFan). All rights reserved.
+Copyright (c) 2017,2018 Ken McGuire (GPSFan). All rights reserved.
 
 This code is based on a fork off Alexey Illarionov. With mods from
 https://github.com/eltorio/RtkGps. The original code

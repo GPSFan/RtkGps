@@ -19,6 +19,29 @@
     </style>
   </head>
   <body>
+$ 1.0 Beta 7
+    % Build 38
+    _ 2018-03-21
+       * reorder visibility settings in ProcessingOptions1Fragment
+       * TODO: improve defaults for RTKLIB integer ambiguity settings
+       *   Fix translations, and solopt settings
+       *   finalize visibility of settings
+       *   add settings for moveable base
+$ 1.0 Beta 6
+    % Build 37
+    _ 2018-03-18
+       * fix another few bugs in ublox.c for M8N+
+       * update rtkpos to latest from RTKExplorer
+       * TODO: test RTKLIB integer ambiguity settings
+       *   Fix translations, and solopt settings
+       *   fix visibility of settings
+$ 1.0 Beta 5
+    % Build 36
+    _ 2018-03-15
+       * fix bug in ublox.c for M8N+
+       * TODO: test RTKLIB integer ambiguity settings
+       *   Fix translations, and solopt settings
+       *   fix visibility of settings
 $ 1.0 Beta 4
     % Build 35
     _ 2018-02-15

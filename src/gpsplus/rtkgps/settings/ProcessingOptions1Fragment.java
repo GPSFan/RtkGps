@@ -389,40 +389,36 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
         findPreference(KEY_RECEIVER_ANTENNA_PCV).setEnabled(ppp);
         findPreference(KEY_PHASE_WINDUP_CORRECTION).setEnabled(ppp);
         findPreference(KEY_EXCLUDE_ECLIPSING).setEnabled(ppp);
-        findPreference(KEY_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp);
-        findPreference(KEY_GLONASS_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp);
 
-        findPreference(KEY_GPS_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp);
-        findPreference(KEY_BDS_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp);
-
-        findPreference(KEY_AR_FILTER).setEnabled(rtk || ppp);
-
-        findPreference(KEY_AR_MIN_FIX).setEnabled(rtk || ppp);
-        findPreference(KEY_MIN_FIX_SATS).setEnabled(rtk || ppp);
-        findPreference(KEY_MIN_HOLD_SATS).setEnabled(rtk || ppp);
-
-        findPreference(KEY_MIN_DROP_SATS).setEnabled(rtk || ppp);
-
-        findPreference(KEY_RCV_STDS).setEnabled(rtk || ppp);
-
-        findPreference(KEY_AR_MAX_ITER).setEnabled(rtk || ppp);
-        findPreference(KEY_N_ITER).setEnabled(rtk || ppp);
-        findPreference(KEY_MAX_AVE_AMB).setEnabled(rtk || ppp);
-
-        findPreference(KEY_VAR_HOLD_AMB).setEnabled(rtk || ppp);
-        findPreference(KEY_GAIN_HOLD_AMB).setEnabled(rtk || ppp);
-
-        findPreference(KEY_SYNC_SOL).setEnabled(rtk || ppp);
-        findPreference(KEY_OUT_SINGLE).setEnabled(rtk || ppp);
-        findPreference(KEY_FREQ_OPT).setEnabled(rtk || ppp);
-        findPreference(KEY_INIT_RST).setEnabled(rtk || ppp);
-
-        findPreference(KEY_MIN_FIX_ELEVATION).setEnabled(rtk || ppp);
-        findPreference(KEY_MIN_HOLD_ELEVATION).setEnabled(rtk || ppp);
-        findPreference(KEY_MIN_FIX_LOCK).setEnabled(rtk || ppp);
-        findPreference(KEY_MIN_FIX_RATIO).setEnabled(rtk || ppp);
-        findPreference(KEY_MAX_POS_VAR).setEnabled(rtk || ppp);
-
+        findPreference(KEY_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp); /* 1 */
+        findPreference(KEY_GLONASS_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp); /* 2 */
+        findPreference(KEY_GPS_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp); /* 3 */
+        findPreference(KEY_BDS_AMBIGUITY_RESOLUTION).setEnabled(rtk || ppp); /* 4 */
+        findPreference(KEY_MIN_FIX_RATIO).setEnabled(rtk || ppp); /* 5 */
+        findPreference(KEY_MIN_FIX_LOCK).setEnabled(rtk || ppp); /* 6 */
+        findPreference(KEY_MIN_FIX_ELEVATION).setEnabled(rtk || ppp); /* 7 */
+        findPreference(KEY_AR_MIN_FIX).setEnabled(rtk || ppp);         /* 8 */
+        findPreference(KEY_MIN_HOLD_ELEVATION).setEnabled(rtk || ppp); /* 9 */
+        findPreference(KEY_AR_OUT_CNT).setEnabled(rtk || ppp); /* 10 */
+        findPreference(KEY_SLIP_THRES).setEnabled(rtk || ppp); /* 11 */
+        findPreference(KEY_MAX_AGE).setEnabled(rtk || ppp); /* 12 */
+        findPreference(KEY_SYNC_SOL).setEnabled(rtk || ppp); /* 13 */
+        findPreference(KEY_REJ_GDOP).setEnabled(rtk || ppp); /* 14 */
+        findPreference(KEY_REJ_IONNO).setEnabled(rtk || ppp); /* 15 */
+        findPreference(KEY_AR_MAX_ITER).setEnabled(rtk || ppp); /* 16 */
+        findPreference(KEY_N_ITER).setEnabled(rtk || ppp);  /* 17 */
+        findPreference(KEY_MIN_FIX_SATS).setEnabled(rtk || ppp); /* 18 */
+        findPreference(KEY_MIN_HOLD_SATS).setEnabled(rtk || ppp); /* 19 */
+        findPreference(KEY_MIN_DROP_SATS).setEnabled(rtk || ppp); /* 20 */
+        findPreference(KEY_RCV_STDS).setEnabled(rtk || ppp); /* 21 */
+        findPreference(KEY_MAX_POS_VAR).setEnabled(rtk || ppp); /* 22 */
+        findPreference(KEY_AR_FILTER).setEnabled(rtk || ppp); /* 23 */
+        findPreference(KEY_VAR_HOLD_AMB).setEnabled(rtk || ppp); /* 24 */
+        findPreference(KEY_GAIN_HOLD_AMB).setEnabled(rtk || ppp); /* 25 */
+        findPreference(KEY_OUT_SINGLE).setEnabled(rtk || ppp); /* 26 */
+        findPreference(KEY_FREQ_OPT).setEnabled(rtk || ppp); /* 27 */
+        findPreference(KEY_INIT_RST).setEnabled(rtk || ppp); /* 28 */
+        findPreference(KEY_MAX_AVE_AMB).setEnabled(rtk || ppp); /* 29 */
 
     }
 
