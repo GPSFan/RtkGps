@@ -632,6 +632,114 @@ public class ProcessingOptions {
      * get min ratio to fix ambiguity
      * @return
      */
+
+    //***
+    public void setERatioL1(double ion){
+        this.mNative.eratioL1 = ion;
+    } // fixme //
+    public double getERatioL1(){
+        return this.mNative.eratioL1;
+    }
+    public void setERatioL2(double ion){
+        this.mNative.eratioL2 = ion;
+    }
+    public double getERatioL2(){
+        return this.mNative.eratioL2;
+    }
+    public void setERatioL5(double ion){
+        this.mNative.eratioL5 = ion;
+    }
+    public double getERatioL5(){
+        return this.mNative.eratioL5;
+    }
+
+    public void setErrPhA(double ion){
+        this.mNative.errPhaseA = ion;
+    }
+    public double getErrPhA(){
+        return this.mNative.errPhaseA;
+    }
+    public void setErrPhB(double ion){
+        this.mNative.errPhaseB = ion;
+    }
+    public double getErrPhB(){
+        return this.mNative.errPhaseB;
+    }
+    public void setErrPhC(double ion){
+        this.mNative.errPhaseC = ion;
+    }
+    public double getErrPhC(){
+        return this.mNative.errPhaseC;
+    }
+
+    public void setErrDop(double ion){
+        this.mNative.errDopplerFreq = ion;
+    }
+    public double getErrDop(){
+        return this.mNative.errDopplerFreq;
+    }
+/*
+    public void setStdBias(double ion){
+        this.mNative.stdBias = ion;
+    }
+    public double getStdBias(){
+        return this.mNative.stdBias;
+    }
+    public void setStdIono(double ion){
+        this.mNative.stdIono = ion;
+    }
+    public double getStdIono(){
+        return this.mNative.stdIono;
+    }
+    public void setStdTrop(double ion){
+        this.mNative.stdTrop = ion;
+    }
+    public double getStdTrop(){
+        return this.mNative.stdTrop;
+    }
+*/
+    public void setPrnBias(double ion){
+        this.mNative.prnBias = ion;
+    }
+    public double getPrnBias(){
+        return this.mNative.prnBias;
+    }
+    public void setPrnIono(double ion){
+        this.mNative.prnIono = ion;
+    }
+    public double getPrnIono(){
+        return this.mNative.prnIono;
+    }
+    public void setPrnTrop(double ion){
+        this.mNative.prnTrop = ion;
+    }
+    public double getPrnTrop(){
+        return this.mNative.prnTrop;
+    }
+
+    public void setPrnAccH(double ion){
+        this.mNative.stdTrop = ion;
+    }
+    public double getPrnAccH(){
+        return this.mNative.stdTrop;
+    }
+    public void setPrnAccV(double ion){
+        this.mNative.stdTrop = ion;
+    }
+    public double getPrnAccV(){
+        return this.mNative.stdTrop;
+    }
+
+    public void setSatClkStab(double ion){
+        this.mNative.sclkstab = ion;
+    }
+    public double getSatClkStab(){
+        return this.mNative.sclkstab;
+    }
+
+    //***
+
+
     public double getValidThresoldAR(){
         return this.mNative.thresar_0;
     }

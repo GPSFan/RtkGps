@@ -19,6 +19,50 @@
     </style>
   </head>
   <body>
+$ 1.0 Beta 1
+    % Build 43
+    _ 2018-05-08
+       * Update RTKLIB to Tim's latest adding improved SSR support
+       * added statistics options
+       * fixed GPXTrace file output
+       * fixed SBAS solution SNR & Skyplot view to show valid sats
+       * TODO: improve defaults for RTKLIB integer ambiguity settings
+       *   Fix/investigate "disappearing" solution during RTK & SBAS Fix
+       *   Fix solution file generation
+       *   Fix translations, and solopt settings
+       *   finalize visibility of settings
+       *   add settings for moveable base
+       *   add Galileo SBAS/EGNOS support
+$ 1.0 Beta 10
+    % Build 42
+    _ 2018-05-06
+       * added statistics options
+       * fixed GPXTrace file output
+       * fixed SBAS solution SNR & Skyplot view to show valid sats
+       * TODO: improve defaults for RTKLIB integer ambiguity settings
+       *   Fix/investigate "disappearing" solution during RTK & SBAS Fix
+       *   Fix solution file generation
+       *   Fix translations, and solopt settings
+       *   finalize visibility of settings
+       *   add settings for moveable base
+       *   add Galileo SBAS/EGNOS support
+$ 1.0 Beta 9
+    % Build 40
+    _ 2018-04-05
+       * change a few things in ublox.c for M8N+
+       * TODO: improve defaults for RTKLIB integer ambiguity settings
+       *   Fix solution file generation
+       *   Fix translations, and solopt settings
+       *   finalize visibility of settings
+       *   add settings for moveable base
+$ 1.0 Beta 8
+    % Build 39
+    _ 2018-03-30
+       * fixed mock locations for Android API 23 and above
+       * TODO: improve defaults for RTKLIB integer ambiguity settings
+       *   Fix translations, and solopt settings
+       *   finalize visibility of settings
+       *   add settings for moveable base
 $ 1.0 Beta 7
     % Build 38
     _ 2018-03-21

@@ -93,6 +93,32 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
 
     public static final String KEY_MIN_FIX_RATIO ="min_fix_ratio";
     public static final String KEY_MAX_POS_VAR ="max_pos_var";
+
+    //***
+    public static final String KEY_ERATIO_L1 ="eratiol1";
+    public static final String KEY_ERATIO_L2 ="eratiol2";
+    public static final String KEY_ERATIO_L5 ="eratiol5";
+
+    public static final String KEY_ERR_PHASE_A ="errphasea";
+    public static final String KEY_ERR_PHASE_B ="errphaseb";
+    public static final String KEY_ERR_PHASE_C ="errphasec";
+
+    public static final String KEY_ERR_DOPP_FREQ ="errdop";
+
+    public static final String KEY_STD_BIAS ="stdbias";
+    public static final String KEY_STD_IONO ="stdiono";
+    public static final String KEY_STD_TROP ="stdtrop";
+
+    public static final String KEY_PRN_BIAS ="prnbias";
+    public static final String KEY_PRN_IONO ="prniono";
+    public static final String KEY_PRN_TROP ="prntrop";
+
+    public static final String KEY_PRN_ACC_H ="prnacch";
+    public static final String KEY_PRN_ACC_V ="prnaccv";
+
+    public static final String KEY_SAT_CLK_STAB ="satclkstab";
+    //***
+
     private static final String KEY_MIN_FIX_ELEVATION = "min_fix_elevation";
     private static final String KEY_MIN_HOLD_ELEVATION = "min_hold_elevation";
 
@@ -142,6 +168,32 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
     private EphemerisOptionPreference mSatEphemClockPref;
     private EditTextPreference mMinRatioFixPref;
     private EditTextPreference mMaxPosVarPref;
+    //***
+    private EditTextPreference mEratioL1;
+    private EditTextPreference mEratioL2;
+    private EditTextPreference mEratioL5;
+
+    private EditTextPreference mErrPhA;
+    private EditTextPreference mErrPhB;
+    private EditTextPreference mErrPhC;
+
+    private EditTextPreference mErrDop;
+/*
+    private EditTextPreference mStdBias;
+    private EditTextPreference mStdIono;
+    private EditTextPreference mStdTrop;
+*/
+    private EditTextPreference mPrnBias;
+    private EditTextPreference mPrnIono;
+    private EditTextPreference mPrnTrop;
+
+    private EditTextPreference mPrnAccH;
+    private EditTextPreference mPrnAccV;
+
+    private EditTextPreference mSCklStab;
+
+    //***
+
     private EditTextPreference mMinElevationFixPref;
     private EditTextPreference mMinElevationHoldPref;
     private EditTextPreference mMinLockFixPref;
@@ -254,7 +306,31 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
 
         mMinElevationFixPref = (EditTextPreference)findPreference(KEY_MIN_FIX_ELEVATION);
         mMinElevationHoldPref = (EditTextPreference)findPreference(KEY_MIN_HOLD_ELEVATION);
+     //***
+        mEratioL1 = (EditTextPreference)findPreference(KEY_ERATIO_L1);
+        mEratioL2 = (EditTextPreference)findPreference(KEY_ERATIO_L2);
+        mEratioL5 = (EditTextPreference)findPreference(KEY_ERATIO_L5);
 
+        mErrPhA = (EditTextPreference)findPreference(KEY_ERR_PHASE_A);
+        mErrPhB = (EditTextPreference)findPreference(KEY_ERR_PHASE_B);
+        mErrPhC = (EditTextPreference)findPreference(KEY_ERR_PHASE_C);
+
+        mErrDop = (EditTextPreference)findPreference(KEY_ERR_DOPP_FREQ);
+/*
+        mStdBias = (EditTextPreference)findPreference(KEY_STD_BIAS);
+        mStdIono = (EditTextPreference)findPreference(KEY_STD_IONO);
+        mStdTrop = (EditTextPreference)findPreference(KEY_STD_TROP);
+*/
+        mPrnBias = (EditTextPreference)findPreference(KEY_PRN_BIAS);
+        mPrnIono = (EditTextPreference)findPreference(KEY_PRN_IONO);
+        mPrnTrop = (EditTextPreference)findPreference(KEY_PRN_TROP);
+
+        mPrnAccH = (EditTextPreference)findPreference(KEY_PRN_ACC_H);
+        mPrnAccV = (EditTextPreference)findPreference(KEY_PRN_ACC_V);
+
+        mSCklStab = (EditTextPreference)findPreference(KEY_SAT_CLK_STAB);
+
+     //***
     }
 
     private void reloadSummaries() {
@@ -348,6 +424,48 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
         summary = mMaxPosVarPref.getText();
         mMaxPosVarPref.setSummary(summary);
 
+     //***
+        summary = mEratioL1.getText();
+        mEratioL1.setSummary(summary);
+        summary = mEratioL2.getText();
+        mEratioL2.setSummary(summary);
+        summary = mEratioL5.getText();
+        mEratioL5.setSummary(summary);
+
+        summary = mErrPhA.getText();
+        mErrPhA.setSummary(summary);
+        summary = mErrPhB.getText();
+        mErrPhB.setSummary(summary);
+        summary = mErrPhC.getText();
+        mErrPhC.setSummary(summary);
+
+        summary = mErrDop.getText();
+        mErrDop.setSummary(summary);
+/*
+        summary = mStdBias.getText();
+        mStdBias.setSummary(summary);
+        summary = mStdIono.getText();
+        mStdIono.setSummary(summary);
+        summary = mStdTrop.getText();
+        mStdTrop.setSummary(summary);
+*/
+        summary = mPrnBias.getText();
+        mPrnBias.setSummary(summary);
+        summary = mPrnIono.getText();
+        mPrnIono.setSummary(summary);
+        summary = mPrnTrop.getText();
+        mPrnTrop.setSummary(summary);
+
+        summary = mPrnAccH.getText();
+        mPrnAccH.setSummary(summary);
+        summary = mPrnAccV.getText();
+        mPrnAccV.setSummary(summary);
+
+        summary = mSCklStab.getText();
+        mSCklStab.setSummary(summary);
+
+        //***
+
         final ArrayList<String> navsys = new ArrayList<String>(10);
         final EnumSet<NavigationSystem> navsys0 = EnumSet.noneOf(NavigationSystem.class);
         // sort
@@ -385,6 +503,7 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
         findPreference(KEY_REC_DYNAMICS).setEnabled(rel);
         mEarthTidesCorrPref.setEnabled(rel || ppp);
 
+
         findPreference(KEY_SAT_ANTENNA_PCV).setEnabled(ppp);
         findPreference(KEY_RECEIVER_ANTENNA_PCV).setEnabled(ppp);
         findPreference(KEY_PHASE_WINDUP_CORRECTION).setEnabled(ppp);
@@ -419,7 +538,11 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
         findPreference(KEY_FREQ_OPT).setEnabled(rtk || ppp); /* 27 */
         findPreference(KEY_INIT_RST).setEnabled(rtk || ppp); /* 28 */
         findPreference(KEY_MAX_AVE_AMB).setEnabled(rtk || ppp); /* 29 */
-
+        //***
+        findPreference(KEY_ERATIO_L1).setEnabled(rtk || ppp); /* 30 */
+        findPreference(KEY_ERATIO_L2).setEnabled(rtk || ppp); /* 31 */
+        findPreference(KEY_ERATIO_L5).setEnabled(rtk || ppp); /* 32 */
+        //***
     }
 
     public static ProcessingOptions readPrefs(Context ctx) {
@@ -505,6 +628,33 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
         opts.setValidThresoldAR(Double.parseDouble(prefs.getString(KEY_MIN_FIX_RATIO, "3.0")));
         opts.setMaxPositionVariance(Double.parseDouble(prefs.getString(KEY_MAX_POS_VAR, "0.004")));
 
+        //***
+        opts.setERatioL1(Double.parseDouble(prefs.getString(KEY_ERATIO_L1, "300")));
+        opts.setERatioL2(Double.parseDouble(prefs.getString(KEY_ERATIO_L2, "300")));
+        opts.setERatioL5(Double.parseDouble(prefs.getString(KEY_ERATIO_L5, "300")));
+
+        opts.setErrPhA(Double.parseDouble(prefs.getString(KEY_ERR_PHASE_A, "0.003")));
+        opts.setErrPhB(Double.parseDouble(prefs.getString(KEY_ERR_PHASE_B, "0.003")));
+        opts.setErrPhC(Double.parseDouble(prefs.getString(KEY_ERR_PHASE_C, "0.000")));
+
+        opts.setErrDop(Double.parseDouble(prefs.getString(KEY_ERR_DOPP_FREQ, "1.0")));
+/*
+        opts.setStdBias(Double.parseDouble(prefs.getString(KEY_STD_BIAS, "0")));
+        opts.setStdIono(Double.parseDouble(prefs.getString(KEY_STD_IONO, "0")));
+        opts.setStdTrop(Double.parseDouble(prefs.getString(KEY_STD_TROP, "0")));
+*/
+        opts.setPrnBias(Double.parseDouble(prefs.getString(KEY_PRN_BIAS, "1.0")));
+        opts.setPrnIono(Double.parseDouble(prefs.getString(KEY_PRN_IONO, "0.25")));
+        opts.setPrnTrop(Double.parseDouble(prefs.getString(KEY_PRN_TROP, "0.0001")));
+
+        opts.setPrnAccH(Double.parseDouble(prefs.getString(KEY_PRN_ACC_H, "0.001")));
+        opts.setPrnAccV(Double.parseDouble(prefs.getString(KEY_PRN_ACC_V, "0.000")));
+
+        opts.setSatClkStab(Double.parseDouble(prefs.getString(KEY_SAT_CLK_STAB, "5.00E-12")));
+
+        //***
+
+
         opts.setMinElevationToFixAmbiguityRad(Double.parseDouble(prefs.getString(KEY_MIN_FIX_ELEVATION, "0"))*(Math.PI/180));
         opts.setMinElevationToHoldAmbiguityRad(Double.parseDouble(prefs.getString(KEY_MIN_HOLD_ELEVATION, "0"))*(Math.PI/180));
         opts.setMinLockToFixAmbiguity(Integer.parseInt(prefs.getString(KEY_MIN_FIX_LOCK, "0")));
@@ -581,10 +731,33 @@ public class ProcessingOptions1Fragment extends PreferenceFragment {
         .putString(KEY_REJ_IONNO, String.valueOf(opts.getRejIonno()))
 
         .putString(KEY_MIN_FIX_LOCK, String.valueOf(opts.getMinLockToFixAmbiguity()))
-        .putString(KEY_MIN_FIX_RATIO, String.valueOf(opts.getMinElevationToFixAmbiguityRad())) /* fixme*/
+        .putString(KEY_MIN_FIX_RATIO, String.valueOf(opts.getMinElevationToFixAmbiguityRad()))
         .putString(KEY_MAX_POS_VAR, String.valueOf(opts.getMaxPositionVariance()))
         .putString(KEY_MIN_FIX_ELEVATION, String.valueOf(opts.getMinElevationToFixAmbiguityRad()))
         .putString(KEY_MIN_HOLD_ELEVATION, String.valueOf(opts.getMinElevationToHoldAmbiguityRad()))
+         //***
+         .putString(KEY_ERATIO_L1, String.valueOf(opts.getERatioL1())) /* fixme*/
+         .putString(KEY_ERATIO_L2, String.valueOf(opts.getERatioL2()))
+         .putString(KEY_ERATIO_L5, String.valueOf(opts.getERatioL5()))
+
+         .putString(KEY_ERR_PHASE_A, String.valueOf(opts.getErrPhA()))
+         .putString(KEY_ERR_PHASE_B, String.valueOf(opts.getErrPhB()))
+         .putString(KEY_ERR_PHASE_C, String.valueOf(opts.getErrPhC()))
+         .putString(KEY_ERR_DOPP_FREQ, String.valueOf(opts.getErrDop()))
+/*
+         .putString(KEY_STD_BIAS, String.valueOf(opts.getStdBias()))
+         .putString(KEY_STD_IONO, String.valueOf(opts.getStdIono()))
+         .putString(KEY_STD_TROP, String.valueOf(opts.getStdTrop()))
+*/
+         .putString(KEY_PRN_BIAS, String.valueOf(opts.getPrnBias()))
+         .putString(KEY_PRN_IONO, String.valueOf(opts.getPrnIono()))
+         .putString(KEY_PRN_TROP, String.valueOf(opts.getPrnTrop()))
+
+         .putString(KEY_PRN_ACC_H, String.valueOf(opts.getPrnAccH()))
+         .putString(KEY_PRN_ACC_V, String.valueOf(opts.getPrnAccV()))
+
+         .putString(KEY_SAT_CLK_STAB, String.valueOf(opts.getSatClkStab()))
+
         .commit()
         ;
         if (DBG) {

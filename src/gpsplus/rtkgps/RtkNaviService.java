@@ -264,8 +264,8 @@ public class RtkNaviService extends IntentService implements LocationListener
         mLProcessingCycle  = Long.valueOf(prefs.getString(ProcessingOptions1Fragment.KEY_PROCESSING_CYCLE, "5"));
         if (mBoolMockLocationsPref)
         {
-                if (Settings.Secure.getString(getContentResolver(),
-                        Settings.Secure.ALLOW_MOCK_LOCATION).equals("0") )
+                 // check if android version is < 6 (ie before api 23)
+                 if   (((android.os.Build.VERSION.SDK_INT) < 23) && (Settings.Secure.getString(getContentResolver(), Settings.Secure.ALLOW_MOCK_LOCATION).equals("0")))
                 {
                     Log.e(RTK_GPS_MOCK_LOCATION_SERVICE,"Mock Location is not allowed");
                 }else{
@@ -304,8 +304,9 @@ public class RtkNaviService extends IntentService implements LocationListener
                     Context.LOCATION_SERVICE);
                   lm.removeTestProvider(GPS_PROVIDER);
         }
-        stop();
+
         finalizeGpxTrace();
+        stop();
 //        syncDropbox();
         stopSelf();
     }
@@ -316,13 +317,13 @@ public class RtkNaviService extends IntentService implements LocationListener
             SharedPreferences prefs= this.getBaseContext().getSharedPreferences(OutputGPXTraceFragment.SHARED_PREFS_NAME, 0);
 //            if(prefs.getBoolean(OutputGPXTraceFragment.KEY_SYNCDROPBOX, false))
 //                {
-//                    String szFilename = prefs.getString(OutputGPXTraceFragment.KEY_FILENAME, "");
-//                    if (szFilename.length()>0)
-//                    {
-//                        String szPath = MainActivity.getFileStorageDirectory() + File.separator + szFilename;
-//                        mGpxTrace.writeFile(szPath);
-//                    }
-//
+                    String szFilename = prefs.getString(OutputGPXTraceFragment.KEY_FILENAME, "");
+                    if (szFilename.length()>0)
+                    {
+                        String szPath = MainActivity.getFileStorageDirectory() + File.separator + szFilename;
+                        mGpxTrace.writeFile(szPath);
+                    }
+
 //                }
         }
 

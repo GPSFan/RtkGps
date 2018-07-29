@@ -216,7 +216,7 @@ public class RtkServer {
      * @param nmeapos	transmitted nmea position (ecef) (m)
      * @param procopt   processing options
      * @param solopt_1  solution 1 options
-     * @oaram solopt_2   solution 2 options
+     * @param solopt_2  solution 2 options
      */
     private native boolean _rtksvrstart(
             int cycle,

@@ -31,7 +31,8 @@
 
 	<PreferenceScreen
 		android:key="button_ambiguity_setting_key"
-		android:title="@string/procopt_ambiguity_resolution_sub_preference_title">
+		android:title="@string/procopt_ambiguity_resolution_sub_preference_title"
+		android:summary="@string/procopt_ambiguity_summary">
 		<ListPreference
 			android:defaultValue="0"
 			android:dialogTitle="@string/procopt_ambiguity_resolution_dialog_title"
@@ -238,7 +239,6 @@
     <gpsplus.rtkgps.settings.widget.EarthTideCorrectionPreference
         android:key="rec_earth_tides_correction"
         android:title="@string/procopt_rec_earth_tides_correction_title" />
-
     <gpsplus.rtkgps.settings.widget.IonosphereCorrectionPreference
         android:dialogTitle="@string/procopt_ionosphere_correction_dialog_title"
         android:key="ionosphere_correction"
@@ -280,5 +280,120 @@
         android:entries="@array/procopt_processing_cycle_entries"
         android:entryValues="@array/procopt_processing_cycle_entries"
         android:defaultValue="10" />
+
+	<!-- Statistics -->
+<PreferenceScreen
+	android:key="button_stats_key"
+	android:title="@string/procopt_stats"
+	android:summary="@string/stats_summary">
+	<EditTextPreference
+		android:defaultValue="300.0"
+		android:inputType="numberDecimal"
+		android:key="eratiol1"
+		android:dialogTitle="@string/procopt_error_ratio_L1_dialog_title"
+		android:title="@string/procopt_error_ratio_L1_title" />
+	<EditTextPreference
+		android:defaultValue="300.0"
+		android:inputType="numberDecimal"
+		android:key="eratiol2"
+		android:dialogTitle="@string/procopt_error_ratio_L2_dialog_title"
+		android:title="@string/procopt_error_ratio_L2_title" />
+	<EditTextPreference
+		android:defaultValue="300.0"
+		android:inputType="numberDecimal"
+		android:key="eratiol5"
+		android:dialogTitle="@string/procopt_error_ratio_L5_dialog_title"
+		android:title="@string/procopt_error_ratio_L5_title" />
+
+	<EditTextPreference
+		android:defaultValue="0.003"
+		android:inputType="numberDecimal"
+		android:key="errphasea"
+		android:dialogTitle="@string/procopt_error_phase_dialog_title"
+		android:title="@string/procopt_error_phase_title" />
+	<EditTextPreference
+		android:defaultValue="0.003"
+		android:inputType="numberDecimal"
+		android:key="errphaseb"
+		android:dialogTitle="@string/procopt_error_phase_el_dialog_title"
+		android:title="@string/procopt_error_phase_el_title" />
+
+	<EditTextPreference
+		android:defaultValue="0.000"
+		android:inputType="numberDecimal"
+		android:key="errphasec"
+		android:dialogTitle="@string/procopt_error_phase_b_dialog_title"
+		android:title="@string/procopt_error_phase_b_title" />
+
+	<EditTextPreference
+		android:defaultValue="1.00"
+		android:inputType="numberDecimal"
+		android:key="errdop"
+		android:dialogTitle="@string/procopt_error_dop_dialog_title"
+		android:title="@string/procopt_error_dop_title" />
+
+<!--
+	<EditTextPreference
+		android:defaultValue="1.00"
+		android:inputType="numberDecimal"
+		android:key="stdbias"
+		android:dialogTitle="@string/procopt_stdbias_dialog_title"
+		android:title="@string/procopt_stdbias_title" />
+	<EditTextPreference
+		android:defaultValue="1.00"
+		android:inputType="numberDecimal"
+		android:key="stdiono"
+		android:dialogTitle="@string/procopt_stdiono_L1_dialog_title"
+		android:title="@string/procopt_stdiono_title" />
+	<EditTextPreference
+		android:defaultValue="1.00"
+		android:inputType="numberDecimal"
+		android:key="stdtrop"
+		android:dialogTitle="@string/procopt_stdtrop_dialog_title"
+		android:title="@string/procopt_stdtrop_title" />
+-->
+
+	<EditTextPreference
+		android:digits="1234567890E."
+		android:defaultValue="1.00"
+		android:key="prnacch"
+		android:dialogTitle="@string/procopt_prnaccelh_dialog_title"
+		android:title="@string/procopt_prnaccelh_title" />
+	<EditTextPreference
+		android:digits="1234567890E."
+		android:defaultValue="0.25"
+		android:key="prnaccv"
+		android:dialogTitle="@string/procopt_prnaccelv_dialog_title"
+		android:title="@string/procopt_prnaccelv_title" />
+
+	<EditTextPreference
+		android:digits="1234567890E."
+		android:defaultValue="0.0001"
+		android:key="prnbias"
+		android:dialogTitle="@string/procopt_prnbias_dialog_title"
+		android:title="@string/procopt_prnbias_title" />
+
+	<EditTextPreference
+		android:digits="1234567890E."
+		android:defaultValue="0.001"
+		android:key="prniono"
+		android:dialogTitle="@string/procopt_prniono_dialog_title"
+		android:title="@string/procopt_prniono_title" />
+
+	<EditTextPreference
+		android:digits="1234567890E."
+		android:defaultValue="0.0001"
+		android:key="prntrop"
+		android:dialogTitle="@string/procopt_prntrop_dialog_title"
+		android:title="@string/procopt_prntrop_title" />
+
+	<EditTextPreference
+		android:digits="1234567890E."
+		android:defaultValue="5E-12"
+		android:key="satclkstab"
+		android:dialogTitle="@string/procopt_clkstab_dialog_title"
+		android:title="@string/procopt_clkstab_title" />
+
+</PreferenceScreen>
 
 </PreferenceScreen>

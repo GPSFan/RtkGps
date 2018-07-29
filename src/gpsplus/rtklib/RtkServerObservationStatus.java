@@ -1,6 +1,7 @@
 package gpsplus.rtklib;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 
 import gpsplus.rtklib.RtkCommon.Dops;
 import gpsplus.rtklib.constants.Constants;
@@ -222,7 +223,6 @@ public class RtkServerObservationStatus {
         }
 
         RtkServerObservationStatus lhs = (RtkServerObservationStatus)o;
-
         final boolean  res = ((mNative.ns == lhs.mNative.ns)
                 && mNative.time.equals(lhs.mNative.time)
                 && Arrays.equals(Arrays.copyOf(mNative.az, mNative.ns), Arrays.copyOf(lhs.mNative.az, lhs.mNative.ns))
@@ -390,7 +390,6 @@ public class RtkServerObservationStatus {
         sb.append(Arrays.toString(Arrays.copyOf(this.mNative.freq1Snr, this.mNative.ns)));
         sb.append("\nvalid: ");
         sb.append(Arrays.toString(Arrays.copyOf(this.mNative.vsat, this.mNative.ns)));
-
         for (int i=0; i<this.mNative.ns; ++i) {
             tmp[i] = df.format(Math.toDegrees(this.mNative.az[i]));
         }
