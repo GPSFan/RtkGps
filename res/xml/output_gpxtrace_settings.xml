@@ -8,6 +8,7 @@
     <EditTextPreference
         android:key="gpxtrace_file_filename"
         android:title="@string/file_filename_title"
+        android:summary="@string/file_filename_summary"
         android:defaultValue="gpxtrace.gpx"
         android:dependency="enable"
         />

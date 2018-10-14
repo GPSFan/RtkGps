@@ -38,7 +38,7 @@
 		<gpsplus.rtkgps.view.SolutionView
 		    android:id="@+id/solutionView"
 		    android:layout_width="wrap_content"
-		    rtkgps:textColor="@android:color/white"
+		    android:textColor="@android:color/white"
 		    android:layout_height="wrap_content" />
 
 	</LinearLayout>

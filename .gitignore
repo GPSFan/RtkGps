@@ -16,7 +16,9 @@
 /lint.xml
 /proguard/
 /projectSet.psf
-
+/captures
+/libs
+/jni/Readme.md
 /obj/
 /libs/mips/librtkgps.so
 /libs/armeabi-v7a/librtkgps.so
